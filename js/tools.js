@@ -12,15 +12,7 @@ $(document).ready(function() {
         speed: 1000,
         pauseOnFocus: false,
         pauseOnHover: false,
-        pauseOnDotsHover: false,
-        responsive: [
-            {
-                breakpoint: 767,
-                settings: {
-                    arrows: false
-                }
-            }
-        ]
+        pauseOnDotsHover: false
     }).on('setPosition', function(event, slick) {
         $('.slider .slick-dots li button.active').removeClass('active');
         $('.slider .slick-dots li button').eq($('.slider').slick('slickCurrentSlide')).addClass('active');
