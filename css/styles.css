@@ -22,8 +22,9 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 
 .slider {font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap; position:relative; overflow:hidden}
 .slider-item {display:inline-block; vertical-align:top; width:100%}
-.slider-item-inner {height:790px; position:relative}
+.slider-item-inner {height:790px; position:relative; overflow:hidden}
 .slider-item-bg {position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center}
+.slider-item-bg-mobile {display:none}
 .slider-item-content {position:relative; color:#fff}
 .slider .slick-prev,
 .slider .slick-next {display:block; position:absolute; z-index:2; top:50%; width:37px; height:53px; border:none; border-radius:0; margin:-26.5px 0 0 0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:none; transition:opacity 0.2s}
@@ -38,6 +39,16 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .slider .slick-dots li button {display:block; position:relative; width:95px; height:5px; border-radius:3px; border:none; background:#4b4b4b; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px}
 .slider .slick-dots li button::after {content:""; display:block; position:absolute; left:0; top:0; width:0; bottom:0; border-radius:3px; background:#ffa336}
 .slider .slick-dots li button.active::after {width:100%; transition:width 5s linear}
+
+@media (max-width:767px) {
+    .slider-item-inner {height:830px}
+    .slider-item-bg {display:none}
+    .slider-item-bg-mobile {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center bottom; background-size:cover}
+    .slider .slick-dots {bottom:20px}
+    .slider .slick-dots li {margin:0 0 0 20px}
+    .slider .slick-dots li:first-child {margin:0}
+    .slider .slick-dots li button {width:91px; height:4px}
+}
 
 .slider-1 {padding:185px 0 0 0}
 .slider-1-realme-8 {width:368px; height:68px; background:url(../images/slider-1-realme-8.png) no-repeat}
@@ -55,8 +66,26 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .slider-1-buy-link::before {content:""; display:block; background:#fff; height:155px; left:-75px; opacity:.2; position:absolute; top:-50px; transform:rotate(35deg); transition:all 550ms cubic-bezier(0.19, 1, 0.22, 1); width:50px}
 .slider-1-buy-link:hover::before {left:120%}
 
+@media (max-width:767px) {
+    .slider-1 {padding:65px 8px 0 8px}
+    .slider-1-realme-8 {width:188px; height:35px; background:url(../images/slider-1-realme-8-mobile.svg) no-repeat}
+    .slider-1-title {font-size:30px; line-height:36px; letter-spacing:0; padding:24px 0 0 0}
+    .slider-1-text {font-size:16px; line-height:24px; letter-spacing:0; padding:12px 0 0 0}
+    .slider-1-buy {padding:8px 0 0 0}
+    .slider-1-price {float:none}
+    .slider-1-price-value {display:inline; font-size:48px; line-height:58px; color:#ff9f00}
+    .slider-1-price-value em {font-size:36px; margin:0 14px 0 0}
+    .slider-1-price-value span {font-size:48px; margin:0 0 0 14px}
+    .slider-1-price-value strong {font-weight:normal; margin:0 0 0 6px}
+    .slider-1-price-old {display:inline; font-size:24px; line-height:58px; padding:0}
+    .slider-1-buy-link {float:none; display:block; width:237px; height:81px; margin:24px 0 0 0; border-radius:5px; background:linear-gradient(180deg, #ffc800 0%, #ff8800 100%); color:#000; font-size:48px; line-height:81px}
+}
+
 .slider-2 {padding:468px 30px 0 30px; max-width:1626px; margin:0 auto}
 .slider-2::after {content:""; display:block; clear:both}
+.slider-2-realme-8-mobile {display:none}
+.slider-2-text-mobile-1 {display:none}
+.slider-2-text-mobile-2 {display:none}
 .slider-2-left {float:left; padding:0 0 0 26px}
 .slider-2-right {float:right}
 .slider-2-realme-8 {width:256px; height:47px; margin:0 0 0 4px; background:url(../images/slider-2-realme-8.png) no-repeat}
@@ -65,6 +94,20 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .slider-2-item {margin:12px 0 0 0}
 .slider-2-item::after {content:""; display:block; clear:both}
 .slider-2-item span {float:left; border:2px solid rgba(255, 255, 255, 0.7); border-radius:23px; height:46px; padding:0 27px}
+
+@media (max-width:767px) {
+    .slider-2 {padding:65px 26px 0 26px; max-width:none; margin:0}
+    .slider-2-realme-8-mobile {display:block; width:188px; height:35px; background:url(../images/slider-1-realme-8-mobile.svg) no-repeat}
+    .slider-2-text-mobile-1 {display:block; margin:32px 0 0 0; font-size:30px; line-height:36px; font-weight:bold; color:#5100fc}
+    .slider-2-text-mobile-2 {display:block; margin:-1px 0 0 0; font-size:30px; line-height:36px; font-weight:bold; color:#5100fc}
+    .slider-2-left {padding:29px 0 0 0}
+    .slider-2-right {padding:29px 0 0 0}
+    .slider-2-realme-8 {width:93px; height:18px; background:url(../images/slider-2-realme-8-mobile.svg) no-repeat}
+    .slider-2-realme-8pro {width:112px; height:18px; background:url(../images/slider-2-realme-8pro-mobile.svg) no-repeat}
+    .slider-2-list {margin:10px 0 0 0; color:#fff; font-weight:normal; font-size:14px; line-height:34px; letter-spacing:0}
+    .slider-2-item {margin:10px 0 0 0}
+    .slider-2-item span {border:1px solid rgba(255, 255, 255, 1); border-radius:18px; height:36px; padding:0 10px}
+}
 
 .slider-3 {padding:195px 30px 0 30px; max-width:1660px; margin:0 auto}
 .slider-3::after {content:""; display:block; clear:both}
@@ -84,6 +127,22 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .slider-3-buy-link::before {content:""; display:block; background:#fff; height:155px; left:-75px; opacity:.2; position:absolute; top:-50px; transform:rotate(35deg); transition:all 550ms cubic-bezier(0.19, 1, 0.22, 1); width:50px}
 .slider-3-buy-link:hover::before {left:120%}
 
+@media (max-width:767px) {
+    .slider-3 {padding:65px 38px 0 38px; max-width:none; margin:0}
+    .slider-3-right {float:none; width:auto}
+    .slider-3-realme-8pro {width:239px; height:35px; background:url(../images/slider-3-realme-8pro.svg) no-repeat}
+    .slider-3-title {font-size:30px; line-height:36px; letter-spacing:0; padding:24px 0 0 0}
+    .slider-3-text {font-weight:normal; font-size:14px; line-height:16px; color:#fff; letter-spacing:0; padding:12px 0 0 0}
+    .slider-3-buy {padding:24px 0 0 0}
+    .slider-3-price {float:none}
+    .slider-3-price-value {display:inline; font-size:48px; line-height:58px; color:#ff9f00}
+    .slider-3-price-value em {font-size:36px; margin:0 14px 0 0}
+    .slider-3-price-value span {font-size:48px; margin:0 0 0 14px}
+    .slider-3-price-value strong {font-weight:normal; margin:0 0 0 6px}
+    .slider-3-price-old {display:inline; font-size:24px; line-height:58px; padding:0}
+    .slider-3-buy-link {float:none; display:block; width:237px; height:81px; margin:24px 0 0 0; border-radius:5px; background:linear-gradient(180deg, #ffc800 0%, #ff8800 100%); color:#000; font-size:48px; line-height:81px}
+}
+
 .links {margin:92px -30px 83px -30px; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
 .links a {display:inline-block; vertical-align:top; width:281px; height:164px; background:url(../images/link.png) no-repeat; text-decoration:none; margin:0 0 0 20px; font-size:29px; line-height:29px; letter-spacing:0; color:#ffa336; font-weight:bold; padding:49px 0 0 0; position:relative; overflow:hidden}
 .links a .btn-glitch-wrap {position:relative; margin:0 10px}
@@ -91,6 +150,15 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .links a .btn-glitch-2 {position:absolute; left:0; top:0; width:100%; height:100%; background:#021428}
 .links a:first-child {margin:0}
 .links a span {display:block; color:#04f0ff; font-size:25px; line-height:25px; font-weight:normal; padding:10px 0 0 0}
+
+@media (max-width:767px) {
+    .links {margin:40px -18px 85px -18px}
+    .links-inner {max-width:442px; margin:0 auto}
+    .links a {width:212px; height:130px; background:url(../images/link-mobile.svg) no-repeat; margin:10px 0 0 18px; font-size:20px; line-height:26px; padding:43px 0 0 0; color:#ff9f00}
+    .links a:nth-child(1) {margin-top:10px}
+    .links a:nth-child(3) {margin-left:0}
+    .links a span {color:#00bae3; font-size:14px; line-height:18px; padding:0}
+}
 
 .title {position:relative; height:114px; margin:0 -30px; background:url(../images/title.png) no-repeat center; text-align:center; padding:25px 0 0 0}
 .title-text-1 {font-size:41px; font-weight:600; line-height:41px; color:#ffa336; letter-spacing:-0.025em}
@@ -111,6 +179,7 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .tech-item {display:inline-block; vertical-align:top; width:100%}
 .tech-item-inner {position:relative; height:564px}
 .tech-item-bg {position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center}
+.tech-item-bg-mobile {display:none}
 .tech-item-content {position:absolute; left:0; top:0; right:0; bottom:0}
 .tech-list .slick-prev,
 .tech-list .slick-next {display:block; position:absolute; z-index:2; top:50%; width:37px; height:53px; border:none; border-radius:0; margin:-26.5px 0 0 0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; background:none; transition:opacity 0.2s}
@@ -125,20 +194,67 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .tech-list .slick-dots li button {display:block; position:relative; width:15px; height:15px; border-radius:50%; border:none; background:#0f5382; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px; transition:background 0.2s}
 .tech-list .slick-dots li.slick-active button {background:#ffa336}
 
+@media (max-width:767px) {
+    .tech {margin:80px 0 0 0}
+    .tech {width:404px; margin:80px auto 0 auto}
+    .tech::before {width:410px; height:24px; background:url(../images/gallery-top-mobile.svg) no-repeat; top:-3px; margin-left:-205px}
+    .tech::after {width:410px; height:24px; background:url(../images/gallery-bottom-mobile.svg) no-repeat; bottom:-3px; margin-left:-205px}
+    .tech-item-inner {height:348px}
+    .tech-item-bg {display:none}
+    .tech-item-bg-mobile {display:block; position:absolute; left:0; top:0; right:0; bottom:0; background:no-repeat center; background-size:cover}
+    .tech-list .slick-prev,
+    .tech-list .slick-next {width:30px; height:42px; margin:-21px 0 0 0}
+    .tech-list .slick-prev {left:10px; background:url(../images/slick-prev-mobile.png) no-repeat}
+    .tech-list .slick-next {right:10px; background:url(../images/slick-next-mobile.png) no-repeat}
+    .tech-list .slick-dots {bottom:15px}
+    .tech-list .slick-dots li {margin:0 0 0 20px}
+    .tech-list .slick-dots li:first-child {margin:0}
+    .tech-list .slick-dots li button {width:10px; height:10px}
+    .tech-list .slick-dots li.slick-active button {background:#ffc915}
+}
+
 .tech-1-realme-8pro {position:absolute; left:77px; top:41px; width:276px; height:40px; background:url(../images/tech-1-realme-8pro.png) no-repeat}
 .tech-1-title {position:absolute; left:77px; top:106px; font-weight:bold; font-size:57px; line-height:57px; color:#fff; letter-spacing:0}
+
+@media (max-width:767px) {
+    .tech-1-realme-8pro {left:31px; top:37px; width:151px; height:22px; background:url(../images/tech-1-realme-8pro-mobile.svg) no-repeat}
+    .tech-1-title {left:31px; top:65px; right:31px; font-size:30px; line-height:36px; white-space:normal}
+}
 
 .tech-2-realme-8pro {position:absolute; left:77px; top:39px; width:342px; height:42px; background:url(../images/tech-2-realme-8pro.png) no-repeat}
 .tech-2-title {position:absolute; left:77px; top:102px; font-weight:bold; font-size:59px; line-height:59px; color:#fff; letter-spacing:0}
 
+@media (max-width:767px) {
+    .tech-2-realme-8pro {left:28px; top:37px; width:182px; height:22px; background:url(../images/tech-2-realme-8pro-mobile.svg) no-repeat}
+    .tech-2-title {left:28px; top:65px; right:28px; font-size:30px; line-height:36px; white-space:normal}
+}
+
 .tech-3-realme-8pro {position:absolute; left:77px; top:39px; width:276px; height:40px; background:url(../images/tech-3-realme-8pro.png) no-repeat}
 .tech-3-title {position:absolute; left:77px; top:102px; font-weight:bold; font-size:59px; line-height:59px; color:#fff; letter-spacing:0}
+
+@media (max-width:767px) {
+    .tech-3-realme-8pro {left:30px; top:37px; width:150px; height:22px; background:url(../images/tech-3-realme-8pro-mobile.svg) no-repeat}
+    .tech-3-title {left:30px; top:65px; right:30px; font-size:30px; line-height:36px; white-space:normal}
+}
 
 .tech-4-realme {position:absolute; left:39px; top:90px; width:250px; height:24px; background:url(../images/tech-4-realme.png) no-repeat}
 .tech-4-noise {position:absolute; left:31px; top:188px; width:460px; height:93px; background:url(../images/tech-4-noise.png) no-repeat}
 .tech-4-text {position:absolute; left:32px; bottom:53px; font-size:22px; line-height:32px; font-weight:500; color:#10131e; letter-spacing:-0.025em}
+.tech-4-text .on-mobile {display:none}
+
+@media (max-width:767px) {
+    .tech-4-realme {left:28px; top:258px; width:130px; height:13px; background:url(../images/tech-4-realme-mobile.svg) no-repeat}
+    .tech-4-noise {left:40px; top:113px; width:172px; height:51px; background:url(../images/tech-4-noise-mobile.svg) no-repeat}
+    .tech-4-text {left:28px; bottom:44px; font-size:8px; line-height:12px; font-weight:normal; color:#000; letter-spacing:0}
+    .tech-4-text .no-mobile {display:none}
+    .tech-4-text .on-mobile {display:inline}
+}
 
 .tech-clarity {position:absolute; right:36px; bottom:34px; padding:0 0 0 93px; background:url(../images/tech-clarity.png) no-repeat; height:38px; font-size:24px; line-height:38px; color:#fff; letter-spacing:0}
+
+@media (max-width:767px) {
+    .tech-clarity {right:22px; bottom:10px; padding:0 0 0 33px; background:url(../images/tech-clarity-mobile.png) no-repeat left center; height:24px; font-size:14px; line-height:24px}
+}
 
 .find {margin:120px -20px 0 -20px; background:rgba(4, 240, 255, 0.05); position:relative}
 .find::before {content:""; display:block; width:139px; height:136px; position:absolute; left:0; top:0; background:url(../images/find-left.png); z-index:-1}
@@ -151,9 +267,9 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .find-text {color:#fff; font-size:24px; line-height:31px; padding:24px 0 0 0}
 .find-links {margin:22px 0 0 -10px; font-size:0; line-height:0; letter-spacing:-1px}
 .find-links a {display:inline-block; vertical-align:top; margin:15px 0 0 10px; border:2px solid #04f0ff; border-radius:6px; height:72px; line-height:68px; font-weight:bold; color:#03bbcb; text-decoration:none; letter-spacing:-0.025em; background:#010e21; text-align:center; position:relative; overflow:hidden}
-.find-links a:hover::before {left:120%}
 .find-links a span {display:block; background:#010e21; position:absolute; left:0; top:0; width:100%; height:100%}
 .find-links a img {vertical-align:middle}
+.find-links a img.on-mobile {display:none}
 .find-link-vk {width:148px; font-size:26px}
 .find-link-vk img {margin:-2px 21px 0 0}
 .find-link-realme {width:276px; font-size:20px}
@@ -162,6 +278,31 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .find-link-instagram img {margin:-2px 16px 0 0}
 .find-link-telegram {width:212px; font-size:24px}
 .find-link-telegram img {margin:-2px 18px 0 0}
+.find-photo-mobile {display:none}
+
+@media (max-width:767px) {
+    .find {width:413px; margin:77px auto 0 auto; background:#021428}
+    .find::before {width:91px; height:89px; background:url(../images/find-left-mobile.svg)}
+    .find::after {width:91px; height:89px; background:url(../images/find-right-mobile.svg)}
+    .find-container {padding:59px 40px 0 40px; text-align:center}
+    .find-photo {display:none}
+    .find-content {float:none; width:auto; margin:0; padding:0}
+    .find-title {font-size:24px; line-height:29px; letter-spacing:0}
+    .find-text {padding:5px 0 0 0; font-size:16px; line-height:19px}
+    .find-links {margin:14px -5px 0 -5px}
+    .find-links a {margin:9px 5px 0 5px; border:1px solid #00d9ff; border-radius:5px; height:48px; line-height:46px; font-size:18px; color:#00bdff; letter-spacing:0}
+    .find-links a img {display:none}
+    .find-links a img.on-mobile {display:inline-block}
+    .find-link-vk {width:93px; font-size:18px}
+    .find-link-vk img {margin:-2px 11px 0 0}
+    .find-link-realme {width:229px; font-size:18px}
+    .find-link-realme img {margin:-2px 14px 0 0}
+    .find-link-instagram {width:152px; font-size:18px}
+    .find-link-instagram img {margin:-2px 11px 0 0}
+    .find-link-telegram {width:145px; font-size:18px}
+    .find-link-telegram img {margin:-2px 11px 0 0}
+    .find-photo-mobile {display:block; line-height:0; text-align:center; margin:10px 0 0 0}
+}
 
 .buy {margin:180px -999px 150px -999px; position:relative; height:218px; background:url(../images/buy.png) no-repeat center; padding:0 999px}
 .buy::after {content:""; display:block; clear:both}
@@ -182,7 +323,7 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 }
 
 .video {margin:60px 0 160px 0}
-.video-list {position:relative; margin:0 -13px; position:relative; font-size:0; line-height:0; letter-spacing:-1px; position:relative; white-space:nowrap}
+.video-list {position:relative; margin:0 -13px; position:relative; font-size:0; line-height:0; letter-spacing:-1px; white-space:nowrap}
 .video-list::before {content:""; display:block; width:1171px; height:69px; background:url(../images/gallery-top.png) no-repeat; position:absolute; z-index:1; left:50%; top:-9px; margin-left:-585.5px; pointer-events:none}
 .video-list::after {content:""; display:block; width:1171px; height:69px; background:url(../images/gallery-bottom.png) no-repeat; position:absolute; z-index:1; left:50%; bottom:-9px; margin-left:-585.5px; pointer-events:none}
 .video-list-inner {position:relative; overflow:hidden}
@@ -202,6 +343,19 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .video-list .slick-prev:hover,
 .video-list .slick-next:hover {opacity:0.8}
 
+@media (max-width:767px) {
+    .video {margin:60px 0 72px 0}
+    .video-list {width:404px; margin:0 auto}
+    .video-list::before {width:410px; height:24px; background:url(../images/gallery-top-mobile.svg) no-repeat; top:-3px; margin-left:-205px}
+    .video-list::after {width:410px; height:24px; background:url(../images/gallery-bottom-mobile.svg) no-repeat; bottom:-3px; margin-left:-205px}
+    .video-item-inner {height:228px}
+    .video-item-link::after {content:""; display:block; width:37px; height:37px; background:url(../images/video-link-mobile.png) no-repeat; margin:-18.5px 0 0 -18.5px}
+    .video-list .slick-prev,
+    .video-list .slick-next {width:30px; height:42px; margin:-21px 0 0 0}
+    .video-list .slick-prev {left:10px; background:url(../images/slick-prev-mobile.png) no-repeat}
+    .video-list .slick-next {right:10px; background:url(../images/slick-next-mobile.png) no-repeat}
+}
+
 .video-ctrl {margin:38px -21px 0 -21px; font-size:0; line-height:0; letter-spacing:-1px; text-align:center}
 .video-ctrl a {display:inline-block; vertical-align:top; width:363px; height:91px; background:url(../images/video-ctrl.png) no-repeat; margin:0 0 0 42px; text-decoration:none; color:#ffa336; font-weight:600; font-size:35px; line-height:91px; position:relative; overflow:hidden}
 .video-ctrl a:first-child {margin:0}
@@ -210,6 +364,14 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .video-ctrl a::after {content:""; display:block; background:#00bdff; height:205px; left:-75px; opacity:0.2; position:absolute; top:-50px; transform:rotate(35deg); transition:all 550ms cubic-bezier(0.19, 1, 0.22, 1); width:50px}
 .video-ctrl a:hover::after {left:120%}
 .video-ctrl a.active::after {display:none}
+
+@media (max-width:767px) {
+    .video-ctrl {margin:31px auto 0 auto; width:414px}
+    .video-ctrl a {display:block; width:414px; height:89px; background:url(../images/video-ctrl-mobile.svg) no-repeat; margin:20px 0 0 0; font-weight:bold; font-size:30px; line-height:89px}
+    .video-ctrl a:first-child {margin:0}
+    .video-ctrl a::before {display:none}
+    .video-ctrl a::after {display:none}
+}
 
 .gallery {margin:60px -13px 0 -13px; font-size:0; line-height:0; letter-spacing:-1px; position:relative; white-space:nowrap}
 .gallery::before {content:""; display:block; width:1171px; height:69px; background:url(../images/gallery-top.png) no-repeat; position:absolute; z-index:1; left:50%; top:-9px; margin-left:-585.5px; pointer-events:none}
@@ -245,7 +407,7 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
     .gallery-list .slick-dots li.slick-active button {background:#ffc915}
 }
 
-.app {margin:60px 0 0 0; text-align:center; padding:0 0 92px 0}
+.app {margin:60px 0 0 0; text-align:center; padding:0 0 56px 0}
 .app-qr {line-height:0}
 .app-qr-mobile {display:none}
 .app-title {font-weight:600; font-size:24px; line-height:24px; color:#ffa336; padding:20px 0 0 0}
@@ -256,14 +418,14 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .app-links a:first-child {margin:0}
 .app-links a span {display:block; background:#000; position:absolute; left:0; top:0; width:100%; height:100%}
 .app-links a img {vertical-align:middle}
-.app-link-vk {padding:0 15px 0 9px}
-.app-link-vk img {margin:-2px 7px 0 0}
-.app-link-instagram {padding:0 9px 0 11px}
-.app-link-instagram img {margin:-2px 7px 0 0}
-.app-link-telegram {padding:0 12px 0 11px}
-.app-link-telegram img {margin:-2px 11px 0 0}
-.app-link-youtube {padding:0 18px 0 12px}
-.app-link-youtube img {margin:-2px 13px 0 0}
+.app-links a.app-link-vk {padding:0 15px 0 9px}
+.app-links a.app-link-vk img {margin:-2px 7px 0 0}
+.app-links a.app-link-instagram {padding:0 9px 0 11px}
+.app-links a.app-link-instagram img {margin:-2px 7px 0 0}
+.app-links a.app-link-telegram {padding:0 12px 0 11px}
+.app-links a.app-link-telegram img {margin:-2px 11px 0 0}
+.app-links a.app-link-realme {padding:0 18px 0 12px; font-size:12px}
+.app-links a.app-link-realme img {margin:-2px 13px 0 0}
 
 @media (max-width:767px) {
     .app {margin:80px 0 0 0; padding:0}
@@ -272,17 +434,19 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
     .app-title {margin:0 auto; max-width:304px; padding:10px 0 0 0; font-size:24px; line-height:29px; font-weight:bold; color:#ff9f00}
     .app-links {margin:20px auto 0 auto; max-width:304px}
     .app-links a {display:block; margin:10px 0 0 0; font-size:18px; text-align:left}
-    .app-link-vk {padding:0 0 0 9px}
-    .app-link-instagram {padding:0 0 0 11px}
-    .app-link-telegram {padding:0 0 0 11px}
-    .app-link-youtube {padding:0 0 0 12px}
+    .app-links a.app-link-vk {padding:0 0 0 9px}
+    .app-links a.app-link-instagram {padding:0 0 0 11px}
+    .app-links a.app-link-telegram {padding:0 0 0 11px}
+    .app-links a.app-link-realme {padding:0 0 0 12px}
 }
 
-.disclaimer {color:#fff; font-size:17px; line-height:24px; padding:40px 999px 70px 999px; margin:0 -999px; color:#04f0ff; background:#021428}
+.disclaimer {color:#fff; font-size:18px; line-height:24px; padding:37px 999px 46px 999px; margin:0 -999px; color:#fff; background:#061a44}
 .disclaimer p {margin:0; padding:0}
+.copyrights {margin:26px 0 0 0; color:rgba(255, 255, 255, 0.5)}
 
 @media (max-width:767px) {
-    .disclaimer {font-size:16px; line-height:18px; padding:19px 30px 26px 30px; margin:35px -30px 0 -30px; color:#fff; background:#061a44}
+    .disclaimer {font-size:16px; line-height:18px; padding:19px 30px 26px 30px; margin:35px -30px 0 -30px}
+    .copyrights {margin:19px 0 0 0}
 }
 
 .up-link {display:none; width:50px; height:50px; position:fixed; right:68px; bottom:38px; z-index:98; background:rgba(255, 255, 255, 0.15) url(../images/up-link.svg) no-repeat center; border-radius:50%; border:1px solid #00bdff; transition:background-color 0.2s; background-size:20px 12px}
@@ -303,10 +467,22 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .window-close {display:block; position:absolute; right:-30px; top:-30px; width:20px; height:20px; background:url(../images/window-close.svg) no-repeat; transition:opacity 0.2s}
 .window-close:hover {opacity:0.8}
 
+@media (max-width:767px) {
+    .window-container {width:426px; margin:80px 0}
+    .window-close {width:30px; height:30px; background-size:100%; right:0; top:-50px}
+}
+
 .shop-list {text-align:center; font-size:0; line-height:0; letter-spacing:-1px; padding:60px 20px}
 .shop-list a {display:inline-block; vertical-align:middle; margin:20px; transition:opacity 0.2s; position:relative; overflow:hidden}
 .shop-list a::before {content:""; display:block; background:#00bdff; height:155px; left:-75px; opacity:0.2; position:absolute; top:-50px; transform:rotate(35deg); transition:all 550ms cubic-bezier(0.19, 1, 0.22, 1); width:50px}
 .shop-list a:hover::before {left:120%}
+.shop-list-mobile {display:none}
+
+@media (max-width:767px) {
+    .shop-list {display:none}
+    .shop-list-mobile {display:block; padding:75px 0 43px 0; text-align:center; font-size:0; line-height:0; letter-spacing:-1px}
+    .shop-list-mobile a {display:inline-block; vertical-align:middle; margin:24px 14px 0 14px}
+}
 
 .links a {opacity:0; transform:translateY(20px); transition:opacity 0.2s, transform 0.2s}
 .links a:nth-child(2) {transition-delay:0.2s}
