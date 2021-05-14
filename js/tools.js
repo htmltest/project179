@@ -15,7 +15,7 @@ $(document).ready(function() {
         pauseOnDotsHover: false,
         responsive: [
             {
-                breakpoint: 767,
+                breakpoint: 1199,
                 settings: {
                     arrows: false
                 }
@@ -117,6 +117,10 @@ $(document).ready(function() {
 
 function windowOpen(windowID) {
     var curPadding = $('.wrapper').width();
+    var curWidth = $(window).width();
+    if (curWidth < 480) {
+        curWidth = 480;
+    }
     var curScroll = $(window).scrollTop();
     $('html').addClass('window-open');
     curPadding = $('.wrapper').width() - curPadding;
@@ -124,6 +128,7 @@ function windowOpen(windowID) {
 
     $('.wrapper').css({'top': -curScroll});
     $('.wrapper').data('curScroll', curScroll);
+    $('meta[name="viewport"]').attr('content', 'width=' + curWidth);
 
     $('.window[data-window="' + windowID + '"]').addClass('visible');
 }
@@ -133,12 +138,15 @@ function windowClose() {
     $('html').removeClass('window-open');
     $('body').css({'margin-right': 0});
     $('.wrapper').css({'top': 0});
+    $('meta[name="viewport"]').attr('content', 'width=device-width');
     $(window).scrollTop($('.wrapper').data('curScroll'));
 }
 
 $(window).on('load resize scroll', function() {
     var windowScroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
+    $('body').append('<div id="body-test-height" style="position:fixed; left:0; top:0; right:0; bottom:0; z-index:-1"></div>');
+    var windowHeight = $('#body-test-height').height();
+    $('#body-test-height').remove();
 
     $('.links a:not(.animated), .title:not(.animated), .buy:not(.animated), .tech:not(.animated), .find:not(.animated), .video-list:not(.animated), .video-ctrl:not(.animated), .gallery:not(.animated), .app:not(.animated)').each(function() {
         var curBlock = $(this);
