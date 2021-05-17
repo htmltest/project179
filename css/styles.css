@@ -267,8 +267,8 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
     .tech-item-inner {height:354px}
     .tech-list .slick-prev,
     .tech-list .slick-next {width:17px; height:25px; margin:-13px 0 0 0}
-    .tech-list .slick-prev {left:6px; background:url(../images/slick-tech-tablet.png) no-repeat}
-    .tech-list .slick-next {right:6px; background:url(../images/slick-tech-tablet.png) no-repeat}
+    .tech-list .slick-prev {left:6px; background:url(../images/slick-prev-tech-tablet.png) no-repeat}
+    .tech-list .slick-next {right:6px; background:url(../images/slick-next-tech-tablet.png) no-repeat}
     .tech-list .slick-dots {bottom:12px}
     .tech-list .slick-dots li {margin:0 0 0 17px}
     .tech-list .slick-dots li:first-child {margin:0}
@@ -394,25 +394,28 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .find-link-telegram {width:212px; font-size:24px}
 .find-link-telegram img {margin:-2px 18px 0 0}
 .find-photo-mobile {display:none}
+.find-photo-tablet {display:none}
 
 @media (min-width:768px) and (max-width:1199px) {
     .find {width:721px; margin:80px auto 0 auto; background:#021428}
     .find::before {width:86px; height:84px; background:url(../images/find-left-mobile.svg) no-repeat; background-size:100%}
     .find::after {width:86px; height:84px; background:url(../images/find-right-mobile.svg) no-repeat; background-size:100%}
-    .find-container {padding:45px 0 0 74px; position:relative}
+    .find-container {padding:45px 0 100px 74px; position:relative}
     .find-content {float:none; width:auto}
     .find-title {font-size:45px; line-height:54px; letter-spacing:0}
-    .find-text {font-size:24px; line-height:30px; padding:17px 0 0 0}
+    .find-text {font-size:24px; line-height:30px; padding:17px 79px 0 0}
     .find-links {margin:45px 0 0 313px}
     .find-links a {display:block; margin:12px 0 0 0; width:227px; height:52px; line-height:50px; border:1px solid #00d9ff; font-size:24px; text-align:left}
     .find-link-vk {width:227px; font-size:24px; padding:0 0 0 5px}
-    .find-link-vk img {width:47px; margin:-2px 21px 0 0}
-    .find-link-realme {width:227px; font-size:24px; padding:0 0 0 5px}
-    .find-link-realme img {width:38px; margin:-2px 13px 0 0; padding:0 0 0 8px}
+    .find-link-vk img {width:36px; margin:-2px 10px 0 0}
+    .find-link-realme {width:227px; font-size:24px; padding:0 0 0 8px}
+    .find-link-realme img {width:38px; margin:-2px 10px 0 0}
     .find-link-instagram {width:227px; font-size:24px; padding:0 0 0 8px}
-    .find-link-instagram img { width:37px; margin:-2px 16px 0 0}
+    .find-link-instagram img { width:37px; margin:-2px 10px 0 0}
     .find-link-telegram {width:227px; font-size:24px; padding:0 0 0 8px}
-    .find-link-telegram img {width:37px; margin:-2px 18px 0 0}
+    .find-link-telegram img {width:37px; margin:-2px 10px 0 0}
+    .find-photo {display:none}
+    .find-photo-tablet {display:block; position:absolute; left:39px; bottom:5px; line-height:0}
 }
 
 @media (max-width:767px) {
@@ -448,6 +451,15 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .buy-link::before {content:""; display:block; background:#fff; height:205px; left:-75px; opacity:.2; position:absolute; top:-50px; transform:rotate(35deg); transition:all 550ms cubic-bezier(0.19, 1, 0.22, 1); width:50px}
 .buy-link:hover::before {left:120%}
 
+@media (min-width:768px) and (max-width:1199px) {
+    .buy {margin:80px -20px; height:184px; background:url(../images/buy-tablet.svg) no-repeat center; padding:0; text-align:left}
+    .buy-text {float:none; padding:0; position:absolute; right:50%; top:0; width:384px; padding:28px 0 0 103px}
+    .buy-title {font-weight:bold; font-size:48px; line-height:49px; color:#ff9f00; letter-spacing:0}
+    .buy-descr {font-weight:normal; font-size:24px; line-height:29px; padding:18px 0 0 0}
+    .buy-link {position:absolute; left:50%; top:60px; float:none; display:block; width:225px; height:77px; margin:0 0 0 71px; background:linear-gradient(180deg, #ffc800 0%, #ff8800 100%); border-radius:5px; font-size:48px; line-height:77px; color:#000}
+    .buy-link::before {display:none}
+}
+
 @media (max-width:767px) {
     .buy {margin:70px -30px; height:275px; background:url(../images/buy-mobile.svg) no-repeat center; padding:0; text-align:center}
     .buy-text {float:none; padding:29px 0 0 0}
@@ -478,6 +490,15 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .video-list .slick-prev:hover,
 .video-list .slick-next:hover {opacity:0.8}
 
+@media (min-width:768px) and (max-width:1199px) {
+    .video {margin:40px 0 80px 0}
+    .video-list {width:722px; margin:0 auto}
+    .video-list::before {width:728px; height:42px; background:url(../images/gallery-top-mobile.svg) no-repeat; background-size:100%; top:-5px; margin-left:-364px}
+    .video-list::after {width:728px; height:42px; background:url(../images/gallery-bottom-mobile.svg) no-repeat; background-size:100%; bottom:-5px; margin-left:-364px}
+    .video-item-inner {height:406px}
+    .video-item-link::after {content:""; display:block; width:65px; height:65px; background:url(../images/video-link-tablet.png) no-repeat; margin:-32.5px 0 0 -32.5px}
+}
+
 @media (max-width:767px) {
     .video {margin:60px 0 72px 0}
     .video-list {width:404px; margin:0 auto}
@@ -499,6 +520,15 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .video-ctrl a::after {content:""; display:block; background:#00bdff; height:205px; left:-75px; opacity:0.2; position:absolute; top:-50px; transform:rotate(35deg); transition:all 550ms cubic-bezier(0.19, 1, 0.22, 1); width:50px}
 .video-ctrl a:hover::after {left:120%}
 .video-ctrl a.active::after {display:none}
+
+@media (min-width:768px) and (max-width:1199px) {
+    .video-ctrl {margin:19px -14px 0 -14px}
+    .video-ctrl a {margin:0 14px; width:225px; height:81px; background:url(../images/video-ctrl-tablet.svg) no-repeat; font-weight:bold; font-size:24px; line-height:24px; position:relative}
+    .video-ctrl a:first-child {margin:0}
+    .video-ctrl a::before {display:none}
+    .video-ctrl a::after {display:none}
+    .video-ctrl a span {display:block; position:absolute; left:10px; right:10px; top:50%; transform:translateY(-50%)}
+}
 
 @media (max-width:767px) {
     .video-ctrl {margin:31px -8px 0 -8px}
@@ -528,6 +558,20 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .gallery-list .slick-dots li button {display:block; position:relative; width:14px; height:14px; border-radius:50%; border:none; background:#0f5382; margin:0; padding:0; outline:none; -webkit-appearance:none; cursor:pointer; font-size:0; line-height:0; text-indent:100px; transition:background 0.2s}
 .gallery-list .slick-dots li.slick-active button {background:#ffc915}
 
+@media (min-width:768px) and (max-width:1199px) {
+    .gallery {width:716px; margin:55px auto 0 auto}
+    .gallery::before {width:726px; height:42px; background:url(../images/gallery-top-mobile.svg) no-repeat; background-size:100%; top:-5px; margin-left:-363px}
+    .gallery::after {width:726px; height:42px; background:url(../images/gallery-bottom-mobile.svg) no-repeat; background-size:100%; bottom:-5px; margin-left:-363px}
+    .gallery-list .slick-prev,
+    .gallery-list .slick-next {width:29px; height:41px; margin:-20.5px 0 0 0}
+    .gallery-list .slick-prev {left:15px; background:url(../images/slick-prev-tablet.png) no-repeat}
+    .gallery-list .slick-next {right:15px; background:url(../images/slick-next-tablet.png) no-repeat}
+    .gallery-list .slick-dots {bottom:12px}
+    .gallery-list .slick-dots li {margin:0 0 0 12px}
+    .gallery-list .slick-dots li:first-child {margin:0}
+    .gallery-list .slick-dots li button {width:6px; height:6px}
+}
+
 @media (max-width:767px) {
     .gallery {width:404px; margin:47px auto 0 auto}
     .gallery::before {width:410px; height:24px; background:url(../images/gallery-top-mobile.svg) no-repeat; top:-3px; margin-left:-205px}
@@ -545,6 +589,7 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 
 .app {margin:60px 0 0 0; text-align:center; padding:0 0 56px 0}
 .app-qr {line-height:0}
+.app-qr-tablet {display:none}
 .app-qr-mobile {display:none}
 .app-title {font-weight:600; font-size:24px; line-height:24px; color:#ffa336; padding:20px 0 0 0}
 .app-text {margin:32px 0 0 0; font-size:20px; line-height:23px; color:#00bae3}
@@ -562,6 +607,17 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .app-links a.app-link-realme {padding:0 10px 0 10px}
 .app-links a.app-link-realme img {margin:-2px 9px 0 0}
 
+@media (min-width:768px) and (max-width:1199px) {
+    .app {margin:80px 0 0 0; padding:0}
+    .app-qr {display:none}
+    .app-qr-tablet {display:block; line-height:0}
+    .app-title {font-weight:bold; font-size:24px; line-height:29px; color:#ff9f00; padding:18px 0 0 0}
+    .app-text {margin:50px 0 0 0}
+    .app-links {margin:30px 0 0 0}
+    .app-links a {margin:0 5px; font-size:15px}
+    .app-links a.app-link-realme img {width:29px; height:29px}
+}
+
 @media (max-width:767px) {
     .app {margin:80px 0 0 0; padding:0}
     .app-qr {display:none}
@@ -578,6 +634,11 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .disclaimer p {margin:0; padding:0}
 .copyrights {margin:26px 0 0 0; color:rgba(255, 255, 255, 0.5)}
 
+@media (min-width:768px) and (max-width:1199px) {
+    .disclaimer {font-size:18px; line-height:24px; padding:49px 44px 26px 44px; margin:84px -20px 0 -20px}
+    .copyrights {margin:18px 0 0 0}
+}
+
 @media (max-width:767px) {
     .disclaimer {font-size:16px; line-height:18px; padding:19px 30px 26px 30px; margin:35px -30px 0 -30px}
     .copyrights {margin:19px 0 0 0}
@@ -586,6 +647,10 @@ body {min-width:480px; margin:0; padding:0; background:#000 url(../images/bg.png
 .up-link {display:none; width:50px; height:50px; position:fixed; right:68px; bottom:38px; z-index:98; background:rgba(255, 255, 255, 0.15) url(../images/up-link.svg) no-repeat center; border-radius:50%; border:1px solid #00bdff; transition:background-color 0.2s; background-size:20px 12px}
 .up-link:hover {background-color:rgba(255, 255, 255, 0.3)}
 .up-link.visible {display:block}
+
+@media (max-width:1199px) {
+    .up-link {right:30px; bottom:30px}
+}
 
 @media (max-width:767px) {
     .up-link {right:20px; bottom:20px}

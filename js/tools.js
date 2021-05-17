@@ -49,7 +49,21 @@ $(document).ready(function() {
         slidesToScroll: 1,
         prevArrow: '<button type="button" class="slick-prev"></button>',
         nextArrow: '<button type="button" class="slick-next"></button>',
-        dots: false
+        dots: false,
+        responsive: [
+            {
+                breakpoint: 1199,
+                settings: {
+                    arrows: false
+                }
+            },
+            {
+                breakpoint: 767,
+                settings: {
+                    arrows: true
+                }
+            }
+        ]
     }).on('setPosition', function(event, slick) {
         $('.video-ctrl a.active').removeClass('active');
         $('.video-ctrl a').eq($('.video-list-inner').slick('slickCurrentSlide')).addClass('active');
